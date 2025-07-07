@@ -1,2 +1,4 @@
-####Birthday App####
-##Check your birthday and get wishes##
+Birthday App
+A app that wishes you a happy birthday
+
+
