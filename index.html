@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Birthday App</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="script/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+
+  <button id="toggleMode">🌙</button>
+  <h1>Birthday Checker 🎂</h1>
+
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <input type="date" id="dateInput" />
+  
+  <div class="btns">
+    <button id="checkBtn">Check My Birthday</button>
+
+    <button id="playMusicBtn">🎵 Play Birthday Song</button>
+    
+  </div>
+
+  <div id="message"></div>
+
+    <!-- 🎵 Birthday Music -->
+  <audio id="birthdaySong" preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/08/23/audio_0d7e09b602.mp3?filename=happy-birthday-to-you-piano-version-123080.mp3" type="audio/mp3">
+  </audio>
+
+
+  <!-- 🎈 Balloons (hidden initially) -->
+  <div id="balloons"></div>
+
+</body>
+</html>

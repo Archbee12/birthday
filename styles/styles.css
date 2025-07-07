@@ -1,0 +1,113 @@
+body {
+  text-align: center;
+  padding: 50px;
+  background-color: white;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+#toggleMode {
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#toggleMode:hover {
+  transform: scale(1.2);
+}
+
+.btns {
+  width: 100%;
+  display:  flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+#checkBtn, #playMusicBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#checkBtn:hover {
+  background-color: #1e7e34;
+}
+
+#nameInput, #dateInput {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#playMusicBtn {
+  background-color: #90c19b;
+}
+
+#playMusicBtn:hover {
+  background-color: #399a4e;
+}
+
+#message.show {
+  opacity: 1;
+  background-color: #f0f0f0;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode #message.show {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* 🎈 Balloons */
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  font-size: 40px;
+  animation: floatUp 6s ease-in infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+/* 🎯 Base styling is already set — now we improve it for small screens */
+@media (max-width: 760px) {
+  .btns {
+    width: 100%;
+    display:  block;
+    margin: 0 auto;
+  }
+
+  #playMusicBtn {
+    margin-top: 10px;
+  }
+}
